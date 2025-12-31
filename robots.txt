@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cvbuider.netlify.app/sitemap.xml
+Sitemap: https://cvbuilder.guidify.app/sitemap.xml

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>ATS CV Builder Pro — Lolos Screening HRD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi pembuat CV ATS Friendly. Format standar HRD global, auto-bullet points, dan real-time preview. Lolos mesin scanner ATS.">
+
+  <meta name="google-site-verification" content="njIkUDWT97ucMoKWITvNsIlrf_hy8i9DmwQhoPbelQw" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',   /* Royal Blue (Warna Tombol Produk) */
+            dark: '#1e293b',      /* Dark Slate (Header Produk) */
+            light: '#f3f4f6',     /* Background Produk */
+            danger: '#dc2626'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Merriweather', 'serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-light text-gray-800 font-sans">
+
+<div id="sticky-timer" class="fixed top-0 left-0 w-full bg-danger text-white text-center py-2 z-50 shadow-md hidden">
+  <p class="text-sm md:text-base font-bold">
+    ⏳ PROMO KARIR SUKSES BERAKHIR: 
+    <span id="timer-display" class="bg-white text-danger px-2 py-0.5 rounded ml-2 font-mono text-lg">02:00:00</span>
+  </p>
+</div>
+
+<div class="h-10"></div>
+
+<section class="bg-primary text-white py-20 px-6 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')]"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-block bg-white/10 border border-white/30 text-white px-6 py-1 rounded-full text-xs font-bold mb-8 tracking-wider uppercase backdrop-blur-md">
+      🚀 Tembus Sistem Screening HRD
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 font-sans">
+      Buat CV ATS Friendly <br>
+      <span class="text-yellow-300">Dalam 5 Menit</span>
+    </h1>
+
+    <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+      Jangan biarkan keahlian Anda terbuang karena format CV yang salah. Gunakan standar internasional yang bersih, rapi, dan mudah dibaca sistem perusahaan global.
+    </p>
+
+    <div class="mb-10 p-6 bg-white rounded-xl inline-block shadow-2xl border border-gray-200 text-gray-800">
+      <p class="text-xs text-gray-500 mb-2 uppercase tracking-widest font-bold">Investasi Karir Masa Depan</p>
+      <div class="flex items-center justify-center gap-5">
+        <span class="line-through text-gray-400 text-xl font-bold">Rp 149.000</span>
+        <span class="text-primary text-5xl font-bold">Rp 49.000</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-5 justify-center">
+      <a href="#checkout" class="bg-yellow-400 text-blue-900 px-8 py-4 rounded font-bold text-xl hover:bg-yellow-300 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 shadow-lg shadow-yellow-400/30">
+        <span>📄</span> Buat CV Sekarang
+      </a>
+      <a href="#demo" class="border border-white/50 text-white px-8 py-4 rounded font-bold text-xl hover:bg-white/10 transition">
+        Lihat Preview
+      </a>
+    </div>
+
+    <p class="text-xs text-blue-200 mt-8 flex justify-center gap-6">
+      <span>✅ Lolos Mesin ATS</span>
+      <span>✅ Auto-Formatting</span>
+      <span>✅ PDF High Quality</span>
+    </p>
+  </div>
+</section>
+
+<section class="bg-white border-b border-gray-200 py-12 shadow-sm relative z-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center divide-x divide-gray-100">
+      
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-dark mb-1">25k+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">CV Dibuat</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-primary mb-1">80%</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Lebih Sering Dipanggil</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-dark mb-1">5.000+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">User Hired</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-primary mb-1">4.9/5</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">User Satisfaction</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="py-20 px-6 bg-light">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-dark">Layout Bersih & Profesional</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Fokus pada konten, bukan hiasan. Desain minimalis yang disukai HRD karena mudah dibaca dalam waktu kurang dari 6 detik.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <div class="group relative rounded shadow-xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-primary text-white text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Smart Editor</div>
+        <img src="preview-cv.jpg" alt="Input Data CV" class="w-full h-auto transform group-hover:scale-102 transition duration-500">
+      </div>
+      
+      <div class="group relative rounded shadow-xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-primary text-white text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Hasil PDF (A4)</div>
+        <img src="preview-cv1.jpg" alt="Preview Hasil CV" class="w-full h-auto transform group-hover:scale-102 transition duration-500">
+      </div>
+
+      <div class="group relative rounded shadow-xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-primary text-white text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Mobile Friendly</div>
+        <img src="preview-cv2.jpg" alt="Edit CV di HP" class="w-full h-auto transform group-hover:scale-102 transition duration-500">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-16 text-dark">
+      Kenapa Harus <span class="text-primary">ATS Friendly?</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-8">
+        
+        <div class="flex gap-5">
+          <div class="bg-primary p-3 rounded h-fit text-white shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-dark">Lolos Mesin Scanner</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Kode HTML bersih yang mudah dibaca robot ATS (Applicant Tracking System). Jangan biarkan CV Anda ditolak sistem sebelum dibaca manusia.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5">
+          <div class="bg-primary p-3 rounded h-fit text-white shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-dark">Real-time Preview</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Apa yang Anda ketik, langsung muncul di layar preview. Tidak perlu refresh atau tebak-tebakan hasil akhir.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5">
+          <div class="bg-primary p-3 rounded h-fit text-white shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" /></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-dark">Auto Bullet Points</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              [cite_start]Sistem otomatis merapikan poin pengalaman kerja Anda[cite: 140]. Struktur yang rapi sangat disukai oleh rekruter.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 p-8 rounded shadow-inner border border-gray-200">
+        <h4 class="font-bold mb-6 text-center text-dark border-b border-gray-300 pb-4">CV BIASA vs CV BUILDER PRO</h4>
+        <div class="space-y-5 text-sm">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+            <span class="text-gray-500">Desain Canva/Grafis</span>
+            <span class="text-red-500 font-bold">❌ Susah Dibaca Robot</span>
+          </div>
+           <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+            <span class="text-gray-500">Edit di Word</span>
+            <span class="text-red-500 font-bold">❌ Format Sering Berantakan</span>
+          </div>
+           <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+            <span class="text-gray-500">Keamanan Data</span>
+            <span class="text-red-500 font-bold">❌ Diupload ke Server</span>
+          </div>
+          <div class="bg-primary p-5 rounded text-center mt-6 shadow-lg">
+            <p class="font-bold text-white mb-1 uppercase tracking-widest">ATS CV Builder Pro</p>
+            <p class="text-blue-100 text-lg">✅ LOLOS SCREENING & AMAN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-light">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12 text-dark">4 Langkah Menuju Hired</h2>
+    
+    <div class="grid md:grid-cols-4 gap-8 text-left">
+      <div class="relative pl-8 border-l-4 border-primary">
+        <div class="absolute -left-4 top-0 bg-primary text-white w-7 h-7 rounded-full text-center font-bold text-sm leading-7">1</div>
+        <h4 class="font-bold text-lg mb-2 text-dark">Buka Aplikasi</h4>
+        [cite_start]<p class="text-sm text-gray-600">Klik file HTML di browser Chrome Laptop atau HP[cite: 135].</p>
+      </div>
+      <div class="relative pl-8 border-l-4 border-primary">
+        <div class="absolute -left-4 top-0 bg-primary text-white w-7 h-7 rounded-full text-center font-bold text-sm leading-7">2</div>
+        <h4 class="font-bold text-lg mb-2 text-dark">Isi Profil</h4>
+        [cite_start]<p class="text-sm text-gray-600">Lengkapi data diri, pengalaman kerja, dan pendidikan[cite: 136, 137].</p>
+      </div>
+      <div class="relative pl-8 border-l-4 border-primary">
+        <div class="absolute -left-4 top-0 bg-primary text-white w-7 h-7 rounded-full text-center font-bold text-sm leading-7">3</div>
+        <h4 class="font-bold text-lg mb-2 text-dark">Input Skill</h4>
+        [cite_start]<p class="text-sm text-gray-600">Masukkan keahlian (pisahkan dengan koma) agar rapi[cite: 141].</p>
+      </div>
+      <div class="relative pl-8 border-l-4 border-primary">
+        <div class="absolute -left-4 top-0 bg-primary text-white w-7 h-7 rounded-full text-center font-bold text-sm leading-7">4</div>
+        <h4 class="font-bold text-lg mb-2 text-dark">Download PDF</h4>
+        [cite_start]<p class="text-sm text-gray-600">Simpan sebagai PDF (A4). Siap kirim ke perusahaan[cite: 147].</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="py-24 px-6 bg-dark text-white text-center relative overflow-hidden">
+   <div class="absolute top-0 right-0 w-80 h-80 bg-primary rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-pulse-slow"></div>
+   <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-400 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-pulse-slow"></div>
+
+  <div class="max-w-4xl mx-auto relative z-10">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6 font-sans">Siap Dihubungi HRD?</h2>
+    <p class="text-blue-200 mb-10 text-lg">
+      Investasi kecil untuk lompatan karir yang besar.<br>
+      Tanpa langganan bulanan yang memberatkan pencari kerja.
+    </p>
+
+    <div class="bg-white text-gray-800 p-10 rounded-xl shadow-2xl max-w-lg mx-auto border-4 border-primary/20 mb-10 relative">
+      <div class="absolute -top-5 right-4 bg-danger text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg uppercase tracking-wide transform rotate-2">
+        Hemat 67%
+      </div>
+
+      <div class="flex justify-between items-end mb-4 border-b border-gray-200 pb-4">
+        <span class="text-gray-500 font-bold">Harga Normal</span>
+        <span class="line-through text-gray-400">Rp 149.000</span>
+      </div>
+      <div class="flex justify-between items-end mb-8">
+        <span class="text-primary font-bold text-xl animate-pulse uppercase tracking-widest">HARGA PROMO</span>
+        <span class="text-6xl font-bold text-dark">Rp 49rb</span>
+      </div>
+      
+      <a href="http://lynk.id/tukastore/ld92o59mp28p/checkout" class="block w-full bg-primary text-white font-bold text-xl py-5 rounded hover:bg-blue-700 hover:shadow-xl transition transform hover:scale-105 uppercase tracking-wide">
+        DOWNLOAD SEKARANG ➔
+      </a>
+      <p class="text-xs text-gray-500 mt-4">Akses selamanya. Garansi 100%.</p>
+    </div>
+
+    <div class="text-sm text-gray-400 space-x-6 flex justify-center items-center">
+      <span class="flex items-center gap-2"><span class="text-yellow-400">★★★★★</span> 4.9/5 Rating</span>
+      <span>•</span>
+      <span>Verified by HR Professionals</span>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-950 text-gray-500 py-10 text-center text-sm border-t border-slate-900">
+  <p class="font-sans text-gray-400">© 2025 ATS CV Builder Pro. All Rights Reserved.</p>
+  <p class="mt-3 text-xs">Produk digital untuk kesuksesan karir Anda.</p>
+</footer>
+
+<script>
+  // === LOGIKA TIMER (KEY UNIK: CV) ===
+  document.addEventListener('DOMContentLoaded', function() {
+    const timerElement = document.getElementById('timer-display');
+    const stickyBar = document.getElementById('sticky-timer');
+    // Key storage dibedakan
+    const STORAGE_KEY = 'cv_promo_endtime'; 
+    const DURATION_HOURS = 2;
+
+    stickyBar.classList.remove('hidden');
+
+    let endTime = localStorage.getItem(STORAGE_KEY);
+
+    if (!endTime) {
+      const now = new Date();
+      now.setHours(now.getHours() + DURATION_HOURS);
+      endTime = now.getTime();
+      localStorage.setItem(STORAGE_KEY, endTime);
+    }
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance < 0) {
+        timerElement.innerHTML = "00:00:00";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.innerHTML = 
+        (hours < 10 ? "0" + hours : hours) + ":" + 
+        (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+        (seconds < 10 ? "0" + seconds : seconds);
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer(); 
+  });
+</script>
+
+</body>
+</html>
